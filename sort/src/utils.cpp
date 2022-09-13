@@ -107,29 +107,28 @@ namespace sort{
 		while (indicador_1<=k && indicador_2<=j){
 			if (A[indicador_1]<= A[indicador_2]){
 			A_random[contador_1]=A[indicador_1]; 
-			indicador_1++;
-			}
+			indicador_1++;}
+			
 			else{
 			A_random[contador_1]=A[indicador_2];
-			indicador_2++;
-			}
-			contador_1++;
-		}
+			indicador_2++;}
+			
+			contador_1++;}
+		
 		while(indicador_1<=k){
 			A_random[contador_1]=A[indicador_1];
 			indicador_1++;
-			contador_1++;
-		}
+			contador_1++;}
+		
 		while(indicador_2<=j){
 			A_random[contador_1]=A[indicador_2];
 			indicador_2++;
-			contador_1++;
-		}
+			contador_1++;}
+		
 		int contador_2=0;
 		for (int con=i;con<(j+1);con++){ 
-			A[con] = A_random[contadoe_2];
-			contador_2++;
-		}
+			A[con] = A_random[contador_2];
+			contador_2++;}
 		delete [] A_random;
 	}
 
