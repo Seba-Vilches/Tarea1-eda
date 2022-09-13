@@ -100,37 +100,37 @@ namespace sort{
 	}
 
 	void merge(float* A, int i, int j, int k){
-		float* aux = createRandomIntArray (j-i+1,0,0);
-		int q=0;
-		int p1=i;
-		int p2=k+1;
-		while (p1<=k && p2<=j){
-			if (A[p1]<= A[p2]){
-				aux[q]=A[p1]; 
-				p1++;
+		float* A_random = createRandomIntArray (j-i+1,0,0);
+		int contador_1=0;
+		int indicador_1=i;
+		int indicador_2=k+1;
+		while (indicador_1<=k && indicador_2<=j){
+			if (A[indicador_1]<= A[indicador_2]){
+			A_random[contador_1]=A[indicador_1]; 
+			indicador_1++;
 			}
 			else{
-				aux[q]=A[p2];
-				p2++;
+			A_random[contador_1]=A[indicador_2];
+			indicador_2++;
 			}
-			q++;
+			contador_1++;
 		}
-		while(p1<=k){
-			aux[q]=A[p1];
-			p1++;
-			q++;
+		while(indicador_1<=k){
+			A_random[contador_1]=A[indicador_1];
+			indicador_1++;
+			contador_1++;
 		}
-		while(p2<=j){
-			aux[q]=A[p2];
-			p2++;
-			q++;
+		while(indicador_2<=j){
+			A_random[contador_1]=A[indicador_2];
+			indicador_2++;
+			contador_1++;
 		}
-		int t=0;
-		for (int u=i;u<(j+1);u++){ 
-			A[u] = aux[t];
-			t++;
+		int contador_2=0;
+		for (int con=i;con<(j+1);con++){ 
+			A[con] = A_random[contadoe_2];
+			contador_2++;
 		}
-		delete [] aux;
+		delete [] A_random;
 	}
 
 }
